@@ -26,6 +26,7 @@
             <h1>I'm Remanda Dheva</h1>
             <h4>Information Systems Student</h4>
             <p>"Don't do anything you don't like to do. Just do whatever you want."</p>
+            <a href="https://drive.google.com/file/d/12Nbu2XoCnnfGWEYG07S_jBrrEB5IXwVx/view?usp=sharing" class="btn">Download CV</a>
             <div class="social-media">
                 <a href="https://www.instagram.com/remnda3174_?igsh=MWlxZTFmNG1jeTI3Nw==" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
                 <a href="https://www.linkedin.com/in/manda-va-a2b6512a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin' ></i></a>
@@ -140,25 +141,22 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            
+            <input type="hidden" name="access_key" value="b175221e-30d4-4040-b9ce-66cdf49cb2d4">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address" required>
-
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
                 <input type="number" placeholder="Mobile Number">
                 <input type="text" placeholder="Email Subject" value="mandva31@gmail.com">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn" onclick="handleFormSubmit()">
+            <textarea name="" id="" cols="30" rows="10" name="message" placeholder="Your Message" required></textarea>
+            
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
-    <script>
-        function handleFormSubmit() {
-          alert("Thank you for your message!");
-        }
-      </script>
 
     <footer class="footer">
         <div class="footer-text">
