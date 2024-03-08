@@ -31,6 +31,25 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '/send-message.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      alert('Pesan Anda telah terkirim.');
+      form.reset();
+    } else {
+      alert('Terjadi kesalahan saat mengirim pesan. Coba lagi.');
+    }
+  };
+  xhr.send(formData);
+});
+
 ScrollReveal({
     reset: true,
     distance: '80px',
